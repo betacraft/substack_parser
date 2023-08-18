@@ -82,10 +82,13 @@ RSpec.describe SubstackParser do
         expect { subject }.to raise_error("File not found")
       end
     end
-
-    describe "Invalid/ missing CSv file" do
+    describe "Invalid/ missing CSV file" do
+      let!(:file_path) { "#{__dir__}/fixtures/sample_invalid_file.zip" }
       it "raises error file not found" do
-        expect { subject.get_read_list_for_post(5) }.to raise_error("The file could not be found or accessed.")
+        expect { subject.mailing_list }.to raise_error("email_list could not be found")
+      end
+      it "returns empty hash" do
+        expect(subject.get_read_list_for_post(5).to_s).to eq "{}"
       end
     end
   end
