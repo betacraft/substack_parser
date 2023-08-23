@@ -1,7 +1,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "substack_parser"
-  spec.version       = "0.1.0"
+  spec.version       = "0.0.1"
   spec.authors       = ["Mathew Thomas"]
   spec.email         = ["mathew@betacraft.com"]
 
@@ -19,4 +19,6 @@ Gem::Specification.new do |spec|
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
+  spec.add_dependency("csv", "~> 3.2")
+  spec.add_dependency("rubyzip", "~> 1.2.1")
 end

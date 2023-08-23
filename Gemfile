@@ -6,3 +6,4 @@ gemspec
 gem "rake", "~> 12.0"
 gem "rspec", "~> 3.0"
 gem 'rubyzip', '~> 1.2.1'
+gem "csv", "~> 3.2"
